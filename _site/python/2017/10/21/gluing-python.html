@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Memo Garcia</title>
-    <meta name="description" content="This is my personal blog">
+    <title>Using python to glue everything</title>
+    <meta name="description" content="Bash is powerful but so is Python. And sometimes you need the best of both.">
   
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/python/2017/10/21/gluing-python.html">
     <link rel="alternate" type="application/rss+xml" title="Memo Garcia" href="/feed.xml">
     
     
@@ -67,47 +67,49 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Using python to glue everything</h1>
+    <p class="post-meta">
+      <time datetime="2017-10-21T14:22:38+01:00" itemprop="datePublished">
+        
+        Oct 21, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Bash is powerful but so is Python. And sometimes you need the best of both.</p>
+
+<p>In order to do that, Python allows you to pipe in and out data from stdin which is quite powerful and elegant.</p>
+
+<p>This is a very basic example but it demostrates the capabilities you can get by combining both.</p>
+
+<p>First, create a <code class="highlighter-rouge">python</code> script that will read data from stdin.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">fileinput</span>
+
+<span class="k">with</span> <span class="n">fileinput</span><span class="o">.</span><span class="nb">input</span><span class="p">()</span> <span class="k">as</span> <span class="n">f_input</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_input</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Save it as <code class="highlighter-rouge">piping.py</code> and give it execution permissions.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x piping.py
+</code></pre></div></div>
+
+<p>By using fileinput you get for “free” the following functionality:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> | ./piping.py | wc <span class="nt">-l</span>
+</code></pre></div></div>
+
+  </div>
+
   
-  
-
-
-  <ul class="post-list">
-    
-      <li>
-        
-        <span class="post-meta">Oct 21, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/python/2017/10/21/gluing-python.html">Using python to glue everything</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Oct 21, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/faas/2017/10/21/pratai.html">Pratai, event driven platform for OpenStack</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Oct 20, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/python/2017/10/20/python-windows-service.html">Python windows service</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <!-- <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
-
-</div>
+</article>
 
       </div>
     </main>
