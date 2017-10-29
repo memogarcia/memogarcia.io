@@ -2,7 +2,7 @@
 layout: post
 title:  "Using python to glue everything"
 date:   2017-10-21 14:22:38 +0100
-categories: python
+categories:
 ---
 
 Bash is powerful but so is Python. And sometimes you need the best of both.

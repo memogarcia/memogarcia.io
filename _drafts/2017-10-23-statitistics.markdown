@@ -7,4 +7,6 @@ categories: elasticsearch
 
 ## References
 
-[Statistical Reasoning](https://lagunita.stanford.edu/courses/OLI/StatReasoning/Open/info)
+* [Statistical Reasoning](https://lagunita.stanford.edu/courses/OLI/StatReasoning/Open/info)
+* [Data Science curriculum](https://github.com/ossu/data-science)
+* [Data Science Ipython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)

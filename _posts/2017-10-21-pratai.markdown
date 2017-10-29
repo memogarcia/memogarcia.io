@@ -2,7 +2,7 @@
 layout: post
 title:  "Pratai, event driven platform for OpenStack"
 date:   2017-10-21 14:21:38 +0100
-categories: faas
+categories:
 ---
 
 **Note** This is a Work-In-Progress Document.
@@ -141,7 +141,7 @@ You can use the async event in the following cases:
 1: Async + Webhook
 
 This is the default behaviour, in which a function will be executed
-asynchronously when an HTTP POST requests hists its endpoint.
+asynchronously when an HTTP POST requests hits its endpoint.
 
 ```bash
 pratai function-create {name} --type async --event webhook
@@ -162,7 +162,7 @@ A function created with this configuration will executed asynchronously
 every time a timer sends an event, the frequency of the events are set in minutes.
 
 ```bash
-pratai function-create {name} -type async --event timer --frequency 5
+pratai function-create {name} --type async --event timer --frequency 5
 ```
 
 #### Wait For Response

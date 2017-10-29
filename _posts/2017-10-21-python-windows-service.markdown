@@ -2,7 +2,7 @@
 layout: post
 title:  "Python windows service"
 date:   2017-10-20 14:22:38 +0100
-categories: python
+categories:
 ---
 
 Create a windows service in python is quite easy.

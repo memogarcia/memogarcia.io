@@ -10,7 +10,7 @@
     <meta name="description" content="Note This is a Work-In-Progress Document.">
   
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://localhost:4000/faas/2017/10/21/pratai.html">
+    <link rel="canonical" href="http://localhost:4000/2017/10/21/pratai.html">
     <link rel="alternate" type="application/rss+xml" title="Memo Garcia" href="/feed.xml">
     
     
@@ -211,7 +211,7 @@ response as an input for other functions.</p>
 <p>1: Async + Webhook</p>
 
 <p>This is the default behaviour, in which a function will be executed
-asynchronously when an HTTP POST requests hists its endpoint.</p>
+asynchronously when an HTTP POST requests hits its endpoint.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">--type</span> async <span class="nt">--event</span> webhook
 </code></pre></div></div>
@@ -229,7 +229,7 @@ message arrives in the event queues available for the platform.</p>
 <p>A function created with this configuration will executed asynchronously
 every time a timer sends an event, the frequency of the events are set in minutes.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">-type</span> async <span class="nt">--event</span> timer <span class="nt">--frequency</span> 5
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">--type</span> async <span class="nt">--event</span> timer <span class="nt">--frequency</span> 5
 </code></pre></div></div>
 
 <h4 id="wait-for-response">Wait For Response</h4>
